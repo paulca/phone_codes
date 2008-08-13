@@ -1,5 +1,9 @@
 Phone Codes
 
+Install:
+
+script/plugin install git://github.com/paulca/phone_codes.git
+
 Usage:
 (in a Rails view)
 <%= f.select :mobile_prefix, PhoneCode.options_for_select %>
