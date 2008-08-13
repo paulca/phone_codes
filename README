@@ -1,11 +1,27 @@
 Phone Codes
 
 Usage:
-
-PhoneCode.options_for_select
+(in a Rails view)
+<%= f.select :mobile_prefix, PhoneCode.options_for_select %>
 
 Description:
 
 From this list: http://en.wikipedia.org/wiki/List_of_international_call_prefixes
 
 Returns an array compatible with Rails' options_for_select of countries and their international dialling prefix.
+
+Options:
+
+You can configure the output by passing in :prefix and :country
+
+eg. if you only want to display the country name in the list:
+
+<%= f.select :mobile_prefix, PhoneCode.options_for_select(:country) %>
+
+or if you just want to display the prefix:
+
+<%= f.select :mobile_prefix, PhoneCode.options_for_select(:prefix) %>
+
+or if you want to change the order:
+
+<%= f.select :mobile_prefix, PhoneCode.options_for_select(:country, :prefix) %>
