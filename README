@@ -1,0 +1,11 @@
+Phone Codes
+
+Usage:
+
+PhoneCode.options_for_select
+
+Description:
+
+From this list: http://en.wikipedia.org/wiki/List_of_international_call_prefixes
+
+Returns an array compatible with Rails' options_for_select of countries and their international dialling prefix.
